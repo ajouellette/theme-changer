@@ -1,0 +1,22 @@
+#!/bin/bash
+# 
+#
+
+apply() {
+    sed -i --follow-symlinks "$1" "$2"
+}
+
+if [ "$#" = 0 ]; then
+    echo "Please specify theme directory"
+    exit 1
+else
+    if [ ! -d "./$1" ]; then
+        echo "Directory does not exist"
+        exit 2
+    else
+        for prgm in $(ls $1); do
+            echo "Applying $1 to $prgm"
+            source $1/$prgm/apply.sh
+        done
+    fi
+fi
