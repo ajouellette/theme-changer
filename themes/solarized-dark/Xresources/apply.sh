@@ -20,3 +20,5 @@ apply '/^\*color12:/c\*color12: #839496' $file
 apply '/^\*color13:/c\*color13: #6c71c4' $file
 apply '/^\*color14:/c\*color14: #93a1a1' $file
 apply '/^\*color15:/c\*color15: #fdf6e3' $file
+
+xrdb -override ~/.Xresources
