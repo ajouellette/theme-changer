@@ -10,7 +10,7 @@ if [ "$#" = 0 ]; then
     echo "Please specify theme directory"
     exit 1
 else
-    if [ ! -d "./$1" ]; then
+    if [ ! -d "$1" ]; then
         echo "Directory does not exist"
         exit 2
     else
